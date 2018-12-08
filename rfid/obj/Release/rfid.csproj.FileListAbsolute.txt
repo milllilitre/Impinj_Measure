@@ -1,0 +1,17 @@
+d:\documents\visual studio 2012\Projects\rfid\rfid\bin\Release\rfid.exe.config
+d:\documents\visual studio 2012\Projects\rfid\rfid\bin\Release\rfid.exe
+d:\documents\visual studio 2012\Projects\rfid\rfid\bin\Release\rfid.pdb
+d:\documents\visual studio 2012\Projects\rfid\rfid\bin\Release\Impinj.OctaneSdk.dll
+d:\documents\visual studio 2012\Projects\rfid\rfid\bin\Release\LLRP.Impinj.dll
+d:\documents\visual studio 2012\Projects\rfid\rfid\bin\Release\LLRP.dll
+d:\documents\visual studio 2012\Projects\rfid\rfid\bin\Release\Impinj.OctaneSdk.pdb
+d:\documents\visual studio 2012\Projects\rfid\rfid\bin\Release\Impinj.OctaneSdk.xml
+d:\documents\visual studio 2012\Projects\rfid\rfid\bin\Release\LLRP.Impinj.pdb
+d:\documents\visual studio 2012\Projects\rfid\rfid\bin\Release\LLRP.pdb
+d:\documents\visual studio 2012\Projects\rfid\rfid\obj\Release\rfid.Form1.resources
+d:\documents\visual studio 2012\Projects\rfid\rfid\obj\Release\rfid.Form2.resources
+d:\documents\visual studio 2012\Projects\rfid\rfid\obj\Release\rfid.Form3.resources
+d:\documents\visual studio 2012\Projects\rfid\rfid\obj\Release\rfid.Properties.Resources.resources
+d:\documents\visual studio 2012\Projects\rfid\rfid\obj\Release\rfid.csproj.GenerateResource.Cache
+d:\documents\visual studio 2012\Projects\rfid\rfid\obj\Release\rfid.exe
+d:\documents\visual studio 2012\Projects\rfid\rfid\obj\Release\rfid.pdb

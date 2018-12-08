@@ -1,0 +1,78 @@
+d:\documents\visual studio 2012\Projects\rfid\rfid\bin\Debug\rfid.exe.config
+d:\documents\visual studio 2012\Projects\rfid\rfid\bin\Debug\rfid.exe
+d:\documents\visual studio 2012\Projects\rfid\rfid\bin\Debug\rfid.pdb
+d:\documents\visual studio 2012\Projects\rfid\rfid\obj\Debug\rfid.csprojResolveAssemblyReference.cache
+d:\documents\visual studio 2012\Projects\rfid\rfid\obj\Debug\rfid.Form1.resources
+d:\documents\visual studio 2012\Projects\rfid\rfid\obj\Debug\rfid.Properties.Resources.resources
+d:\documents\visual studio 2012\Projects\rfid\rfid\obj\Debug\rfid.csproj.GenerateResource.Cache
+d:\documents\visual studio 2012\Projects\rfid\rfid\obj\Debug\rfid.exe
+d:\documents\visual studio 2012\Projects\rfid\rfid\obj\Debug\rfid.pdb
+d:\documents\visual studio 2012\Projects\rfid\rfid\bin\Debug\Impinj.OctaneSdk.dll
+d:\documents\visual studio 2012\Projects\rfid\rfid\bin\Debug\LLRP.Impinj.dll
+d:\documents\visual studio 2012\Projects\rfid\rfid\bin\Debug\LLRP.dll
+d:\documents\visual studio 2012\Projects\rfid\rfid\bin\Debug\Impinj.OctaneSdk.pdb
+d:\documents\visual studio 2012\Projects\rfid\rfid\bin\Debug\Impinj.OctaneSdk.xml
+d:\documents\visual studio 2012\Projects\rfid\rfid\bin\Debug\LLRP.Impinj.pdb
+d:\documents\visual studio 2012\Projects\rfid\rfid\bin\Debug\LLRP.pdb
+d:\documents\visual studio 2012\Projects\rfid\rfid\obj\Debug\rfid.Form2.resources
+d:\documents\visual studio 2012\Projects\rfid\rfid\obj\Debug\rfid.Form3.resources
+C:\Users\14414\Desktop\DenseEnvironment\rfid_impinj\rfid\rfid\bin\Debug\rfid.exe.config
+C:\Users\14414\Desktop\DenseEnvironment\rfid_impinj\rfid\rfid\obj\Debug\rfid.exe
+C:\Users\14414\Desktop\DenseEnvironment\rfid_impinj\rfid\rfid\obj\Debug\rfid.pdb
+C:\Users\14414\Desktop\DenseEnvironment\rfid_impinj\rfid\rfid\bin\Debug\rfid.exe
+C:\Users\14414\Desktop\DenseEnvironment\rfid_impinj\rfid\rfid\bin\Debug\rfid.pdb
+C:\Users\14414\Desktop\DenseEnvironment\rfid_impinj\rfid\rfid\bin\Debug\LLRP.Impinj.dll
+C:\Users\14414\Desktop\DenseEnvironment\rfid_impinj\rfid\rfid\bin\Debug\LLRP.dll
+C:\Users\14414\Desktop\DenseEnvironment\rfid_impinj\rfid\rfid\bin\Debug\Impinj.OctaneSdk.pdb
+C:\Users\14414\Desktop\DenseEnvironment\rfid_impinj\rfid\rfid\bin\Debug\Impinj.OctaneSdk.xml
+C:\Users\14414\Desktop\DenseEnvironment\rfid_impinj\rfid\rfid\bin\Debug\LLRP.Impinj.pdb
+C:\Users\14414\Desktop\DenseEnvironment\rfid_impinj\rfid\rfid\bin\Debug\LLRP.pdb
+C:\Users\14414\Desktop\DenseEnvironment\rfid_impinj\rfid\rfid\obj\Debug\rfid.csprojResolveAssemblyReference.cache
+C:\Users\14414\Desktop\DenseEnvironment\rfid_impinj\rfid\rfid\obj\Debug\rfid.Form1.resources
+C:\Users\14414\Desktop\DenseEnvironment\rfid_impinj\rfid\rfid\obj\Debug\rfid.Form2.resources
+C:\Users\14414\Desktop\DenseEnvironment\rfid_impinj\rfid\rfid\obj\Debug\rfid.Form3.resources
+C:\Users\14414\Desktop\DenseEnvironment\rfid_impinj\rfid\rfid\obj\Debug\rfid.Properties.Resources.resources
+C:\Users\14414\Desktop\DenseEnvironment\rfid_impinj\rfid\rfid\obj\Debug\rfid.csproj.GenerateResource.Cache
+C:\Users\Administrator\Desktop\英频杰\rfid_impinj\rfid\rfid\bin\Debug\rfid.exe.config
+C:\Users\Administrator\Desktop\英频杰\rfid_impinj\rfid\rfid\obj\Debug\rfid.exe
+C:\Users\Administrator\Desktop\英频杰\rfid_impinj\rfid\rfid\obj\Debug\rfid.pdb
+C:\Users\Administrator\Desktop\英频杰\rfid_impinj\rfid\rfid\bin\Debug\rfid.exe
+C:\Users\Administrator\Desktop\英频杰\rfid_impinj\rfid\rfid\bin\Debug\rfid.pdb
+C:\Users\Administrator\Desktop\英频杰\rfid_impinj\rfid\rfid\bin\Debug\LLRP.Impinj.dll
+C:\Users\Administrator\Desktop\英频杰\rfid_impinj\rfid\rfid\bin\Debug\LLRP.dll
+C:\Users\Administrator\Desktop\英频杰\rfid_impinj\rfid\rfid\bin\Debug\Impinj.OctaneSdk.pdb
+C:\Users\Administrator\Desktop\英频杰\rfid_impinj\rfid\rfid\bin\Debug\Impinj.OctaneSdk.xml
+C:\Users\Administrator\Desktop\英频杰\rfid_impinj\rfid\rfid\bin\Debug\LLRP.Impinj.pdb
+C:\Users\Administrator\Desktop\英频杰\rfid_impinj\rfid\rfid\bin\Debug\LLRP.pdb
+C:\Users\Administrator\Desktop\英频杰\rfid_impinj\rfid\rfid\obj\Debug\rfid.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\英频杰\rfid_impinj\rfid\rfid\obj\Debug\rfid.Form1.resources
+C:\Users\Administrator\Desktop\英频杰\rfid_impinj\rfid\rfid\obj\Debug\rfid.Form2.resources
+C:\Users\Administrator\Desktop\英频杰\rfid_impinj\rfid\rfid\obj\Debug\rfid.Form3.resources
+C:\Users\Administrator\Desktop\英频杰\rfid_impinj\rfid\rfid\obj\Debug\rfid.Properties.Resources.resources
+C:\Users\Administrator\Desktop\英频杰\rfid_impinj\rfid\rfid\obj\Debug\rfid.csproj.GenerateResource.Cache
+D:\英频杰资料\英频杰\rfid_impinj\rfid\rfid\bin\Debug\rfid.exe.config
+D:\英频杰资料\英频杰\rfid_impinj\rfid\rfid\bin\Debug\rfid.exe
+D:\英频杰资料\英频杰\rfid_impinj\rfid\rfid\bin\Debug\rfid.pdb
+D:\英频杰资料\英频杰\rfid_impinj\rfid\rfid\obj\Debug\rfid.Form1.resources
+D:\英频杰资料\英频杰\rfid_impinj\rfid\rfid\obj\Debug\rfid.Form2.resources
+D:\英频杰资料\英频杰\rfid_impinj\rfid\rfid\obj\Debug\rfid.Form3.resources
+D:\英频杰资料\英频杰\rfid_impinj\rfid\rfid\obj\Debug\rfid.Properties.Resources.resources
+D:\英频杰资料\英频杰\rfid_impinj\rfid\rfid\obj\Debug\rfid.csproj.GenerateResource.Cache
+D:\英频杰资料\英频杰\rfid_impinj\rfid\rfid\obj\Debug\rfid.exe
+D:\英频杰资料\英频杰\rfid_impinj\rfid\rfid\obj\Debug\rfid.pdb
+D:\英频杰资料\英频杰\rfid_impinj\rfid\rfid\bin\Debug\LLRP.dll
+D:\英频杰资料\英频杰\rfid_impinj\rfid\rfid\bin\Debug\LLRP.Impinj.dll
+D:\英频杰资料\英频杰\rfid_impinj\rfid\rfid\obj\Debug\rfid.csprojResolveAssemblyReference.cache
+E:\英频杰资料\英频杰LM\rfid_impinj\rfid\rfid\bin\Debug\rfid.exe.config
+E:\英频杰资料\英频杰LM\rfid_impinj\rfid\rfid\bin\Debug\rfid.exe
+E:\英频杰资料\英频杰LM\rfid_impinj\rfid\rfid\bin\Debug\rfid.pdb
+E:\英频杰资料\英频杰LM\rfid_impinj\rfid\rfid\obj\Debug\rfid.csprojAssemblyReference.cache
+E:\英频杰资料\英频杰LM\rfid_impinj\rfid\rfid\obj\Debug\rfid.Form1.resources
+E:\英频杰资料\英频杰LM\rfid_impinj\rfid\rfid\obj\Debug\rfid.Form2.resources
+E:\英频杰资料\英频杰LM\rfid_impinj\rfid\rfid\obj\Debug\rfid.Form3.resources
+E:\英频杰资料\英频杰LM\rfid_impinj\rfid\rfid\obj\Debug\rfid.Properties.Resources.resources
+E:\英频杰资料\英频杰LM\rfid_impinj\rfid\rfid\obj\Debug\rfid.csproj.GenerateResource.cache
+E:\英频杰资料\英频杰LM\rfid_impinj\rfid\rfid\obj\Debug\rfid.csproj.CoreCompileInputs.cache
+E:\英频杰资料\英频杰LM\rfid_impinj\rfid\rfid\obj\Debug\rfid.csproj.CopyComplete
+E:\英频杰资料\英频杰LM\rfid_impinj\rfid\rfid\obj\Debug\rfid.exe
+E:\英频杰资料\英频杰LM\rfid_impinj\rfid\rfid\obj\Debug\rfid.pdb

@@ -546,6 +546,11 @@ namespace rfid
             maxMin = int.Parse(textBox1.Text) / 60;
             maxSec = int.Parse(textBox1.Text) % 60;
         }
+
+        private void label26_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

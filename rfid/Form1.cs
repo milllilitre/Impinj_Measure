@@ -12,7 +12,7 @@ using Impinj.OctaneSdk;
 using System.Diagnostics;
 using System.Threading;
 using System.Timers;
-
+using log4net;
 
 namespace rfid
 {
@@ -21,19 +21,23 @@ namespace rfid
         static public DataTable dt = new DataTable();//显示表格
         static public bool dtLock = false;
         //BindingSource bs = new BindingSource();
-        
-        bool start_or_stop =true;//start 按钮切换
+
+        static bool start_or_stop = true;//start 按钮切换
         //public bool detail_ornot = false;
         public static Stopwatch stw = new Stopwatch();// 需要using system.diagnostics。用来计时。
-       // DataView dv =new DataView(); //去除dt空行，在timer_tick中有剩下两行代码
-       int maxMin = 0;  //定时器的最大读取分钟数
-       int maxSec = 0;  //定时器的最大读取秒数
-       static int c1 = 0; static int c2 = 0; static int c3 = 0; static int c4 = 0;//四个读写器分别的读取数目
+        // DataView dv =new DataView(); //去除dt空行，在timer_tick中有剩下两行代码
+        int maxMin = 0;  //定时器的最大读取分钟数
+        int maxSec = 0;  //定时器的最大读取秒数
+        static int c1 = 0; static int c2 = 0; static int c3 = 0; static int c4 = 0;//四个读写器分别的读取数目
+        public static ILog _log = LogManager.GetLogger("Form1");
+        
+ 
 
 
         public Form1()
         {
             InitializeComponent();
+            _log.Info("Form1 intialized.");
             maxMin = int.Parse(textBox1.Text) / 60;
             maxSec = int.Parse(textBox1.Text) % 60;
         }
@@ -93,7 +97,7 @@ namespace rfid
             throw new NotImplementedException();
         }
 /****************************************************************  
-点击开始按钮，开始盘存
+Click start to start inventory
 *****************************************************************/
         private void start_Click(object sender, EventArgs e)
         {
@@ -101,6 +105,8 @@ namespace rfid
             {
                 if (start_or_stop == true)
                 {
+                    _log.Debug("Inventory started.");
+                    // wait the set amount of time before starting
                     Thread.Sleep(int.Parse(textBox2.Text) * 1000);
                     c1 = 0; c2 = 0; c3 = 0; c4 = 0;
                     //Thread.Sleep(10000);
@@ -111,40 +117,47 @@ namespace rfid
                     stw.Start();
                     timer1.Start();
                     dtLock = false;
-                    dataGridView1.DataSource = dt;
                     foreach (ImpinjReader reader in Form2.readers)
                     {
                         reader.Start();
                     }
                     start_or_stop = false;
                     start.Text = "stop";
-                    detail.Enabled = false;// 这个按钮是detail result
+                    detail.Enabled = false;// disable button detail result
                 }
                 else
                 {
-                    stw.Stop();
+                    start_or_stop = true;
+                    _log.Debug("Stop clicked.");
                     foreach (ImpinjReader reader in Form2.readers)
                     {
-                        reader.Stop();;
+                        reader.Stop();
                     }
+                    _log.Debug("Readers stopped.");
+                    stw.Stop();
                     timer1.Stop();
-                    Thread.Sleep(2000);
+                    _log.Debug("Timers stopped.");
+                    //Thread.Sleep(2000);
                     start.Text = "restart";
-                    detail.Enabled = true;// 这个按钮是detail result
-
-                    //去除dt空行
+                    detail.Enabled = true;// enable button detail result
+                    dataGridView1.DataSource = dt;
+                    //remove the empty lines in dt
+                    
                     while (dtLock == true) ;
                     dtLock = true;
+                    _log.Debug("dt locked.");
                     DataView dv = dt.DefaultView;
-                    dv.RowFilter = "Reader<>'' or Reader is not null";//
+                    _log.Debug("dt to dv.");
+                    //dv.RowFilter = "Reader<>'' or Reader is not null";//
+                    dv.RowFilter = "Reader<>''";
+                    _log.Debug("RowFilter defined.");
                     dt = dv.ToTable();
                     dtLock = false;
-//                    dataGridView1.DataSource = dt;
-
-                    start_or_stop = true;
+                    //                    dataGridView1.DataSource = dt;
+                    _log.Debug("dv to dt.");
                     //dataGridView1.Update();
-                    dataGridView1.Refresh();
-                    
+                    //dataGridView1.Refresh();
+                    //_log.Debug("dataGridView refreshed.");
                 }
             }
             catch (Exception ee)
@@ -166,6 +179,9 @@ namespace rfid
 *****************************************************************/
         public static void OnTagsReported(ImpinjReader sender, TagReport report)
         {
+            if (start_or_stop)
+                return;
+
             try
             {
                 foreach (Tag tag in report)
@@ -240,8 +256,8 @@ namespace rfid
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (MessageBox.Show(
-            "窗口关闭后，数据即将丢失！是否现在关闭窗口",
-            "提示",
+            "All unsaved data will be lost! Are you sure to close the window?",
+            "Warning",
             MessageBoxButtons.OKCancel,
             MessageBoxIcon.Question) != DialogResult.OK)
             {
@@ -271,7 +287,7 @@ namespace rfid
 *****************************************************************/
         private void timer1_Tick(object sender, EventArgs e)
         {
-            //dataGridView1.DataSource = dt;
+            dataGridView1.DataSource = dt;
             TimeSpan ts = stw.Elapsed;
             if (checkBox1.Checked == true)
             {
@@ -294,13 +310,14 @@ namespace rfid
                     //去除dt空行
                     while (dtLock == true) ;
                     dtLock = true;
-                    DataView dv = dt.DefaultView;
-                    dv.RowFilter = "Reader<>'' or Reader is not null";//
-                    dt = dv.ToTable();
+                    DataView dv1 = dt.DefaultView;
+                    //dv.RowFilter = "Reader<>'' or Reader is not null";//
+                    dv1.RowFilter = "Reader<>''";
+                    dt = dv1.ToTable();
                     dtLock = false;
 //                    dataGridView1.DataSource = dt;
 
-                    dataGridView1.Refresh();
+                    //dataGridView1.Refresh();
                     start_or_stop = true;
                 }
             }
@@ -308,11 +325,11 @@ namespace rfid
             string runtime = string.Format("{0:00}:{1:00}:{2:00}.{3:00}", ts.Hours, ts.Minutes, ts.Seconds, ts.Milliseconds / 10);
             label1.Text = runtime;
             label4.Text = Convert.ToString(dt.Rows.Count);
-            ////给dt去除空行
-            //DataView dv = dt.DefaultView;
-            //dv.RowFilter = "Reader<>null";//
-            //DataTable dt2 = dv.ToTable();
-            //dt.DefaultView.RowFilter = "Reader<>null";
+            //给dt去除空行
+            DataView dv = dt.DefaultView;
+            dv.RowFilter = "Reader<>null";//
+            DataTable dt2 = dv.ToTable();
+            dt.DefaultView.RowFilter = "Reader<>null";
             //
             if ((ts.Hours * 3600 + ts.Minutes * 60 + ts.Seconds + ts.Milliseconds / 1000 )!= 0)
             {
@@ -338,16 +355,16 @@ namespace rfid
             Form form3 = new Form3();
             form3.ShowDialog();
         }
-        private void 退出ToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void 打开ToolStripMenuItem_Click(object sender, EventArgs e)
+        private void OpenToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SaveFileDialog sfd = new SaveFileDialog();
             // sfd.ShowDialog();
-            sfd.Filter = "CSV文件|*.CSV";
+            sfd.Filter = "CSV file|*.CSV";
             sfd.InitialDirectory = "C:\\";
             // sfd.InitialDirectory = "e:\\";
             //sfd.InitialDirectory = "E:\\";
@@ -401,13 +418,13 @@ namespace rfid
 
             sw.Close();
             fs.Close();
-            MessageBox.Show("CSV文件保存成功！");
+            MessageBox.Show("Successfully saved to CSV file.");
         }
 
-        private void 打开ToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void OpenToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             OpenFileDialog ofd = new OpenFileDialog();
-            ofd.Filter = "CSV文件|*.CSV";
+            ofd.Filter = "CSV file|*.CSV";
             if (ofd.ShowDialog() == DialogResult.Cancel)
             {
                 return;
@@ -417,7 +434,7 @@ namespace rfid
                 dataGridView1.DataSource = null;
                 string fileName = ofd.FileName;
                 dataGridView1.DataSource = OpenCSV(fileName);
-                MessageBox.Show("成功显示CSV数据！");
+                MessageBox.Show("CSV file loaded.");
             }
         }
         public static DataTable OpenCSV(string fileName)
@@ -465,7 +482,7 @@ namespace rfid
             return dt;
         }
 
-        private void 复制ToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void CopyToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             if (Convert.ToString(dataGridView1.SelectedCells) != "")
                 Clipboard.SetDataObject(dataGridView1.GetClipboardContent());
@@ -494,20 +511,20 @@ namespace rfid
             }
         }
 
-        private void 复制ToolStripMenuItem_Click(object sender, EventArgs e)
+        private void CopyToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (Convert.ToString(dataGridView1.SelectedCells) != "")
                 Clipboard.SetDataObject(dataGridView1.GetClipboardContent());
         }
 
-        private void 关于ToolStripMenuItem_Click(object sender, EventArgs e)
+        private void AboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Shandong University");
         }
 
-        private void 联系我们ToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ContactUsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("邮箱：liumengup@126.com");
+            MessageBox.Show("Email：liumengup@126.com\n             millilitre@126.com");
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -517,19 +534,22 @@ namespace rfid
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+            _log.Debug("Save button clicked.");
             SaveFileDialog sfd = new SaveFileDialog();
             // sfd.ShowDialog();
-            sfd.Filter = "CSV文件|*.CSV";
+            sfd.Filter = "CSV Files|*.CSV";
 //            sfd.InitialDirectory = "C:\\";
             // sfd.InitialDirectory = "e:\\";
             //sfd.InitialDirectory = "E:\\";
             //sfd.Filter = "txt文件(*.txt)|*.txt";
             if (sfd.ShowDialog() == DialogResult.Cancel)
             {
+                _log.Debug("Save canceled.");
                 return;
             }
             else
             {
+                _log.Debug("Save initiated.");
                 string fileName = sfd.FileName;
                 Form1.SaveCSV(dt, fileName);
                 //string localFilePath = sfd.FileName.ToString(); //获得文件路径 
@@ -537,7 +557,9 @@ namespace rfid
                 //fin = new StreamWriter(localFilePath, true);
                 //fin.Write(dt);
                 //fin.Close();
+                _log.Debug("Save Successfull.");
             }
+            
 
         }
 

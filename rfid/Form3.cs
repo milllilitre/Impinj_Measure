@@ -143,7 +143,7 @@ namespace rfid
         {
             SaveFileDialog sfd = new SaveFileDialog();
             // sfd.ShowDialog();
-            sfd.Filter = "CSV文件|*.CSV";
+            sfd.Filter = "CSV file|*.CSV";
             sfd.InitialDirectory = "C:\\";
             // sfd.InitialDirectory = "e:\\";
             //sfd.InitialDirectory = "E:\\";
@@ -167,7 +167,7 @@ namespace rfid
         private void dToolStripMenuItem_Click(object sender, EventArgs e)
         {
             OpenFileDialog ofd = new OpenFileDialog();
-            ofd.Filter = "CSV文件|*.CSV";
+            ofd.Filter = "CSV file|*.CSV";
             if (ofd.ShowDialog() == DialogResult.Cancel)
             {
                 return;
@@ -177,15 +177,15 @@ namespace rfid
                 dataGridView1.DataSource = null;
                 string fileName = ofd.FileName;
                 dataGridView1.DataSource =Form1.OpenCSV(fileName);
-                MessageBox.Show("成功显示CSV数据！");
+                MessageBox.Show("CSV file loaded.");
             }
         }
 
-        private void 保存ToolStripMenuItem_Click(object sender, EventArgs e)
+        private void SaveToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SaveFileDialog sfd = new SaveFileDialog();
             // sfd.ShowDialog();
-            sfd.Filter = "CSV文件|*.CSV";
+            sfd.Filter = "CSV file|*.CSV";
             sfd.InitialDirectory = "C:\\";
             // sfd.InitialDirectory = "e:\\";
             //sfd.InitialDirectory = "E:\\";
@@ -201,19 +201,19 @@ namespace rfid
             }
         }
 
-        private void 退出ToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
             dttag.Rows.Clear();
         }
 
-        private void 复制ToolStripMenuItem_Click(object sender, EventArgs e)
+        private void CopyToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (Convert.ToString(dataGridView1.SelectedCells) != "")
                 Clipboard.SetDataObject(dataGridView1.GetClipboardContent());
         }
 
-        private void 复制ToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void CopyToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             if (Convert.ToString(dataGridView1.SelectedCells) != "")
                 Clipboard.SetDataObject(dataGridView1.GetClipboardContent());

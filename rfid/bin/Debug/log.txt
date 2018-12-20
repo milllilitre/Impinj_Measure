@@ -1,0 +1,46 @@
+[2018-12-20 15:37:01,501]  1 -- INFO  -- Form1 [.ctor] -- Form1 intialized.
+[2018-12-20 15:37:04,913]  1 -- DEBUG -- Form1 [start_Click] -- Inventory started.
+[2018-12-20 15:37:06,139]  1 -- DEBUG -- Form1 [start_Click] -- Stop clicked.
+[2018-12-20 15:37:06,152]  1 -- DEBUG -- Form1 [start_Click] -- Readers stopped.
+[2018-12-20 15:37:06,152]  1 -- DEBUG -- Form1 [start_Click] -- Timers stopped.
+[2018-12-20 15:37:06,154]  1 -- DEBUG -- Form1 [start_Click] -- dt locked.
+[2018-12-20 15:37:06,160]  1 -- DEBUG -- Form1 [start_Click] -- dt to dv.
+[2018-12-20 15:41:25,684]  1 -- INFO  -- Form1 [.ctor] -- Form1 intialized.
+[2018-12-20 15:41:32,472]  1 -- DEBUG -- Form1 [start_Click] -- Inventory started.
+[2018-12-20 15:41:34,847]  1 -- DEBUG -- Form1 [start_Click] -- Stop clicked.
+[2018-12-20 15:41:34,857]  1 -- DEBUG -- Form1 [start_Click] -- Readers stopped.
+[2018-12-20 15:41:34,858]  1 -- DEBUG -- Form1 [start_Click] -- Timers stopped.
+[2018-12-20 15:41:34,862]  1 -- DEBUG -- Form1 [start_Click] -- dt locked.
+[2018-12-20 15:41:34,862]  1 -- DEBUG -- Form1 [start_Click] -- dt to dv.
+[2018-12-20 15:41:35,008]  1 -- DEBUG -- Form1 [start_Click] -- RowFilter defined.
+[2018-12-20 15:41:35,009]  1 -- DEBUG -- Form1 [start_Click] -- dv to dt.
+[2018-12-20 15:47:49,789]  1 -- INFO  -- Form1 [.ctor] -- Form1 intialized.
+[2018-12-20 15:47:55,723]  1 -- INFO  -- Form1 [.ctor] -- Form1 intialized.
+[2018-12-20 15:48:00,544]  1 -- DEBUG -- Form1 [start_Click] -- Inventory started.
+[2018-12-20 15:48:03,201]  1 -- DEBUG -- Form1 [start_Click] -- Stop clicked.
+[2018-12-20 15:48:03,218]  1 -- DEBUG -- Form1 [start_Click] -- Readers stopped.
+[2018-12-20 15:48:03,218]  1 -- DEBUG -- Form1 [start_Click] -- Timers stopped.
+[2018-12-20 15:48:03,220]  1 -- DEBUG -- Form1 [start_Click] -- dt locked.
+[2018-12-20 15:48:03,220]  1 -- DEBUG -- Form1 [start_Click] -- dt to dv.
+[2018-12-20 15:48:03,384]  1 -- DEBUG -- Form1 [start_Click] -- RowFilter defined.
+[2018-12-20 15:48:03,385]  1 -- DEBUG -- Form1 [start_Click] -- dv to dt.
+[2018-12-20 15:48:06,354]  1 -- DEBUG -- Form1 [button1_Click_1] -- Save button clicked.
+[2018-12-20 15:48:09,479]  1 -- DEBUG -- Form1 [button1_Click_1] -- Save canceled.
+[2018-12-20 15:48:11,257]  1 -- DEBUG -- Form1 [start_Click] -- Inventory started.
+[2018-12-20 15:48:14,796]  1 -- DEBUG -- Form1 [start_Click] -- Stop clicked.
+[2018-12-20 15:48:14,811]  1 -- DEBUG -- Form1 [start_Click] -- Readers stopped.
+[2018-12-20 15:48:14,812]  1 -- DEBUG -- Form1 [start_Click] -- Timers stopped.
+[2018-12-20 15:48:14,815]  1 -- DEBUG -- Form1 [start_Click] -- dt locked.
+[2018-12-20 15:48:14,815]  1 -- DEBUG -- Form1 [start_Click] -- dt to dv.
+[2018-12-20 15:48:15,051]  1 -- DEBUG -- Form1 [start_Click] -- RowFilter defined.
+[2018-12-20 15:48:15,052]  1 -- DEBUG -- Form1 [start_Click] -- dv to dt.
+[2018-12-20 15:48:28,086]  1 -- DEBUG -- Form1 [start_Click] -- Inventory started.
+[2018-12-20 15:50:30,562]  1 -- DEBUG -- Form1 [start_Click] -- Stop clicked.
+[2018-12-20 15:50:30,570]  1 -- DEBUG -- Form1 [start_Click] -- Readers stopped.
+[2018-12-20 15:50:30,571]  1 -- DEBUG -- Form1 [start_Click] -- Timers stopped.
+[2018-12-20 15:50:30,572]  1 -- DEBUG -- Form1 [start_Click] -- dt locked.
+[2018-12-20 15:50:30,573]  1 -- DEBUG -- Form1 [start_Click] -- dt to dv.
+[2018-12-20 15:50:38,365]  1 -- DEBUG -- Form1 [start_Click] -- RowFilter defined.
+[2018-12-20 15:50:38,400]  1 -- DEBUG -- Form1 [start_Click] -- dv to dt.
+[2018-12-20 15:50:40,060]  1 -- DEBUG -- Form1 [button1_Click_1] -- Save button clicked.
+[2018-12-20 15:50:42,423]  1 -- DEBUG -- Form1 [button1_Click_1] -- Save canceled.
